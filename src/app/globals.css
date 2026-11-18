@@ -1,0 +1,776 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --ink: #111827;
+  --muted: #52657d;
+  --line: #e4eaf1;
+  --accent: #ff2d8d;
+  --soft: #fdf2f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--ink);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Notice Bar */
+.notice {
+  background: #171a26;
+  color: #f1f5f9;
+  text-align: center;
+  font-size: 12px;
+  padding: 8px 14px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+.notice span, em, mark {
+  color: var(--accent);
+}
+
+/* Header */
+.site-header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  padding: 0 max(4vw, 20px);
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 50;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: -1.2px;
+  margin-right: auto;
+  color: #161a27;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo span {
+  color: var(--accent);
+}
+.logo b {
+  font-size: 12px;
+  border: 1.5px solid var(--accent);
+  padding: 1px 4px;
+  border-radius: 4px;
+  margin-left: 3px;
+  color: var(--accent);
+  vertical-align: middle;
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 26px;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+}
+.desktop-nav a {
+  transition: color 0.15s ease;
+}
+.desktop-nav a:hover {
+  color: var(--accent);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+button.mode {
+  border: 1px solid var(--line);
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 7px 11px;
+  color: #536174;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download,
+.primary {
+  background: var(--accent);
+  color: #ffffff !important;
+  border: 0;
+  border-radius: 9px;
+  padding: 10px 18px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 8px 20px rgba(255, 45, 141, 0.32);
+  white-space: nowrap;
+  font-size: 14px;
+  text-decoration: none;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.download:hover,
+.primary:hover {
+  opacity: 0.94;
+  transform: translateY(-1px);
+}
+
+.secondary {
+  border: 1px solid var(--line);
+  padding: 10px 18px;
+  border-radius: 9px;
+  color: #495a70;
+  background: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: #f1f5f9;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 18px;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #0f172a;
+}
+
+/* Mobile Drawer */
+.mobile-nav-drawer {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+  padding: 16px 20px 20px;
+  gap: 6px;
+  animation: slideDown 0.18s ease-out;
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.mobile-nav-drawer a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  padding: 9px 0;
+  border-bottom: 1px solid #f1f5f9;
+  text-decoration: none;
+}
+.mobile-drawer-download {
+  margin-top: 10px;
+  text-align: center;
+  background: var(--accent);
+  color: #ffffff !important;
+  border-radius: 8px;
+  padding: 12px 18px !important;
+  border: 0 !important;
+  font-weight: 700;
+  display: block;
+}
+
+/* Sports Strip Marquee */
+.sports-strip {
+  height: 38px;
+  white-space: nowrap;
+  overflow: hidden;
+  background: #fdf2f8;
+  color: #be185d;
+  font-size: 13px;
+  line-height: 38px;
+  border-top: 1px solid #fce7f3;
+  border-bottom: 1px solid #fce7f3;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.sports-strip-track {
+  display: inline-flex;
+  gap: 32px;
+  animation: sports-marquee 30s linear infinite;
+  white-space: nowrap;
+  font-weight: 600;
+}
+@keyframes sports-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Layout Wrappers */
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+  padding: 60px 20px 40px;
+}
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hero-meta-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.hero-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-banner-img {
+  max-height: 540px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.22));
+}
+
+/* App Details Section */
+.app-details {
+  background: #ffffff;
+}
+.details-card {
+  max-width: 740px;
+  margin: 25px auto 32px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: left;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+.detail-row {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  padding: 13px 24px;
+  border-bottom: 1px solid var(--line);
+}
+.detail-row:last-child {
+  border-bottom: 0;
+}
+.detail-row span {
+  color: var(--muted);
+  font-weight: 500;
+}
+.detail-row b {
+  color: var(--ink);
+  font-weight: 700;
+  word-break: break-word;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.feature-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 26px 24px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Gallery Section */
+.gallery {
+  background: var(--soft);
+  text-align: center;
+  padding: 70px 0;
+}
+.mock-gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  max-width: 1060px;
+  margin: 36px auto 0;
+  padding: 15px 24px;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+.screen {
+  flex: 0 0 245px;
+  height: 505px;
+  border: 7px solid #0b0d15;
+  border-radius: 36px;
+  background: #171a2b;
+  color: white;
+  padding: 26px 15px;
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.7;
+  box-shadow: 0 16px 36px rgba(21, 29, 47, 0.16);
+  scroll-snap-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.image-screen {
+  padding: 0 !important;
+  overflow: hidden;
+}
+.image-screen img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Install Steps */
+.install {
+  background: #ffffff;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1020px;
+  margin: 0 auto 35px;
+}
+.steps article {
+  text-align: center;
+  padding: 24px 20px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+}
+.steps article > b {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* Sports Section */
+.sports {
+  background: #fafbfc;
+}
+.sport-grid {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: auto;
+}
+.sport-grid div {
+  background: white;
+  border: 1px solid var(--line);
+  padding: 18px;
+  border-radius: 12px;
+  text-align: left;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+/* FAQ */
+.faq {
+  max-width: 850px;
+  margin: auto;
+}
+.faq details {
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  margin: 10px 0;
+  padding: 16px 18px;
+  background: #ffffff;
+}
+.faq summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq summary span {
+  color: var(--accent);
+}
+.faq details p {
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 12px 0 0 0;
+}
+
+/* Banner & About */
+.full-banner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.full-banner img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.about {
+  padding: 60px 20px;
+}
+.about h2 {
+  font-size: 32px;
+  margin: 0 0 20px;
+}
+.about h3 {
+  font-size: 19px;
+  margin: 28px 0 8px;
+}
+.about p {
+  max-width: 735px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0 0 16px;
+}
+
+/* Final CTA */
+.final-cta {
+  background: var(--soft);
+  text-align: center;
+  padding: 70px 20px;
+}
+.final-cta h2 {
+  font-size: 32px;
+  letter-spacing: -1px;
+  margin: 0 0 12px;
+}
+.final-cta p {
+  color: var(--muted);
+  margin: 0 0 28px;
+}
+
+/* Footer */
+.site-footer {
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  padding: 60px max(4vw, 20px) 34px !important;
+  border-top: 1px solid var(--line) !important;
+  text-align: left !important;
+}
+.site-footer .footer-grid {
+  max-width: 1060px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 50px;
+}
+.site-footer .footer-brand .logo {
+  display: inline-block;
+  color: var(--ink);
+  margin: 0 0 14px;
+}
+.site-footer .footer-brand p {
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0 0 18px;
+}
+.site-footer .footer-brand mark {
+  background: #fdf2f8;
+  color: #be185d;
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-weight: 600;
+  font-size: 12px;
+}
+.site-footer .footer-download {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 9px;
+  padding: 10px 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.site-footer .footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.site-footer .footer-column h3 {
+  font-size: 16px;
+  margin: 0 0 8px;
+  color: #0f172a;
+}
+.site-footer .footer-column a {
+  color: var(--muted);
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.site-footer .footer-column a:hover {
+  color: var(--accent);
+}
+.site-footer .footer-bottom {
+  max-width: 1060px;
+  margin: 44px auto 0;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+}
+.site-footer .footer-bottom p {
+  max-width: 720px;
+  margin: 0 auto 12px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.site-footer .footer-bottom small {
+  font-size: 12px;
+  color: #8492aa;
+}
+
+.section {
+  padding: 70px max(4vw, 20px);
+  text-align: center;
+}
+.section h2 {
+  font-size: 32px;
+  letter-spacing: -1px;
+  margin: 0 0 10px;
+  color: #0f172a;
+}
+.sub {
+  color: var(--muted);
+  margin: 0 0 36px;
+  font-size: 16px;
+}
+
+/* =========================================================
+   RESPONSIVE MEDIA QUERIES (Mobile & Tablet)
+   ========================================================= */
+
+@media (max-width: 880px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+  .site-header {
+    height: 62px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+  .logo {
+    font-size: 22px;
+  }
+  .download {
+    padding: 8px 13px;
+    font-size: 13px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 36px 16px 28px;
+    gap: 32px;
+  }
+  .hero-copy {
+    align-items: center;
+    text-align: center;
+  }
+  .hero-copy h1 {
+    font-size: clamp(30px, 8vw, 44px);
+  }
+  .hero-copy > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .actions {
+    justify-content: center;
+    width: 100%;
+  }
+  .hero-meta-row {
+    justify-content: center;
+  }
+  .hero-banner-img {
+    max-height: 420px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+  .site-footer .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .mock-gallery {
+    padding: 10px 16px;
+    gap: 14px;
+  }
+  .screen {
+    flex: 0 0 215px;
+    height: 440px;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 0 14px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  .download {
+    padding: 7px 11px;
+    font-size: 12.5px;
+  }
+  button.mode {
+    padding: 6px 9px;
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 28px 14px 24px;
+    gap: 26px;
+  }
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .actions .primary,
+  .actions .secondary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 13px 20px;
+    font-size: 15px;
+  }
+
+  .hero-banner-img {
+    max-height: 350px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .feature-card {
+    padding: 20px 18px !important;
+    border-radius: 14px;
+  }
+
+  .details-card {
+    margin: 18px 0;
+    border-radius: 12px;
+  }
+  .detail-row {
+    padding: 11px 14px;
+    font-size: 13px;
+    grid-template-columns: 45% 55%;
+  }
+
+  .sport-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .sport-grid div {
+    padding: 14px 12px;
+    font-size: 13.5px;
+  }
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .site-footer {
+    padding: 40px 16px 24px !important;
+  }
+
+  .section {
+    padding: 48px 16px;
+  }
+  .section h2 {
+    font-size: 26px;
+  }
+  .sub {
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+
+  .full-banner {
+    padding: 0 12px;
+  }
+  .full-banner img {
+    max-height: 240px;
+    border-radius: 10px;
+  }
+}
