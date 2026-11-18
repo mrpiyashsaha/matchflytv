@@ -100,7 +100,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             `,
           }}
         />
-        {/* <script src="https://czernik.org/22/e67c1ce697b8e207a7458c8f84a9b550" /> */}
+    
       </head>
       <body>{children}</body>
     </html>
