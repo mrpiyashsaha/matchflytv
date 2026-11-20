@@ -43,23 +43,34 @@ export const defaultAbout = {
   subtitle: "One free app for live sports — every match you don't want to miss.",
   content: `## What is Matchfly TV?
 
-Matchfly TV is a free Android app for sports fans. It covers all sports — cricket, football, tennis, kabaddi, hockey, basketball, boxing and motorsport — with cricket and football the most watched. It doesn't broadcast its own channels; instead it gathers live streaming links that are already available on the internet and lays them out in one tidy app, so you can find a match and start watching in seconds. No Play Store account, no sign-up, no monthly bill.
+Matchfly TV is the ultimate free live sports streaming app built specifically for Android users. Whether you are passionate about cricket, football, tennis, basketball, kabaddi, or motorsport, Matchfly TV brings every high-stakes match directly to your fingertips in crystal-clear Full HD.
 
-## Why we built it
+Instead of navigating complicated websites or paying hefty subscription fees, Matchfly TV gathers verified, high-speed streaming links and backup servers into one clean, lightweight app. You can tap, tune in, and enjoy your favorite games within seconds — with zero account creation, zero subscriptions, and completely free of charge.
 
-Following your team shouldn't mean juggling subscriptions and a dozen apps. We built Matchfly TV so fans have one reliable, simple place to catch the game — whether it's the World Cup final or a weekday league clash.
+## Why We Built Matchfly TV
 
-## How much does Matchfly TV cost?
+True sports fans shouldn't have to juggle multiple expensive subscriptions or miss crucial moments due to laggy, broken streams. We built Matchfly TV with a simple mission: to give every sports lover a seamless, reliable, and premium viewing experience on any Android device. From high-profile international tournaments to thrilling weekly domestic leagues, Matchfly TV ensures you never miss a kickoff, boundary, or match point.
 
-Nothing. Matchfly TV is completely free — no subscription, no in-app purchases and no card details.
+## What Sports Can You Watch?
 
-## Getting started with Matchfly TV
+- **Live Cricket:** ICC World Cups, IPL, BPL, PSL, Big Bash League, Test series, ODI, and T20 internationals.
+- **Top Football:** Premier League, UEFA Champions League, La Liga, Serie A, World Cup qualifiers, and continental tournaments.
+- **Global Sports:** NBA Basketball, Grand Slam Tennis, WWE, Formula 1, MotoGP, Pro Kabaddi, and Badminton.
 
-Download the latest APK and follow the simple Android install guide. Setup takes about a minute.
+## How Much Does Matchfly TV Cost?
 
-## Why fans pick Matchfly TV
+Matchfly TV is **100% free forever**. There are no hidden fees, no subscriptions, no in-app purchases, and you never have to provide credit card details or personal information. Simply download and start streaming instantly.
 
-Matchfly TV keeps the matches you care about across every sport in one free place.`,
+## Why Fans Pick Matchfly TV
+
+- **Multiple Server Links:** Every game comes with backup server links so if one stream slows down, you can switch smoothly and keep watching without missing a moment.
+- **Ultra-Fast & Buffer-Free:** A lightweight built-in player engineered for smooth streaming up to Full HD, even on modest phones and mobile data.
+- **No Sign-Up or Root Needed:** No account, no registration, and no device rooting required — runs on completely standard Android devices.
+- **Daily Updated Matches:** Links are verified and refreshed daily so you always have working streams for upcoming games.
+
+## Getting Started with Matchfly TV
+
+Getting started takes less than a minute! Download the latest official APK from our website, follow the easy step-by-step install guide, and start watching live sports on your phone, tablet, or TV instantly.`,
 };
 
 export const defaultTerms = `## Terms of Service for Matchfly TV
